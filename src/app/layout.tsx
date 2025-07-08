@@ -32,12 +32,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden  !bg-[#f3f6ec]`}
       >
+          <Header/>
         <div className="w-full h-full relative overflow-x-hidden">
-        <Header/>
-        <ToastContainer/>
-        {children}
-        <CursorPointer/>
-        <Footer/>
+          <ToastContainer/>
+          {children}
+          <CursorPointer/>
+          <Footer/>
           <CircularScrollProgress/>
         </div>
       </body>

@@ -30,7 +30,7 @@ export default function CircularScrollProgress() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   
-const isAtBottom = scrollProgress >= 100;
+const isAtBottom = scrollProgress >= 97;
 
   return (
     <div className={`!fixed bottom-6 right-6 h-14 w-14 bg-white border-none outline-none z-50  rounded-full shadow-md  ${isAtBottom && ' !bg-extra-dark-orange'}`}>
@@ -48,10 +48,10 @@ const isAtBottom = scrollProgress >= 100;
       {isAtBottom && (
         <button
           onClick={scrollToTop}
-          className="absolute inset-0 flex items-center justify-center w-full h-full rounded-full bg-transparent pointer-events-auto"
+          className="absolute inset-0 flex items-center justify-center w-full h-full rounded-full pointer-events-auto bg-white"
           aria-label="Scroll to top"
         >
-          <ArrowUpIcon className='text-white text-2xl'/>
+          <ArrowUpIcon className='text-extra-dark-orange text-2xl  w-6 h-6'/>
         </button>
       )}
     </div>
