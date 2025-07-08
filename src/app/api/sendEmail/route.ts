@@ -1,0 +1,77 @@
+import { EMAIL_PASS, EMAIL_USER } from '@/libs/contants';
+import nodemailer from 'nodemailer';
+
+export const runtime = 'nodejs';
+
+interface EmailRequestBody {
+    email: string;
+    subject?: string;
+    [key: string]: any;
+}
+
+interface MailOptions {
+    from: string;
+    to: string;
+    subject: string;
+    text: string;
+}
+
+export async function POST(req: Request): Promise<Response> {
+    try {
+        const data: EmailRequestBody = await req.json();
+        const { email, subject } = data;
+
+        if (!email) {
+            return new Response(JSON.stringify({ error: 'Email is required.' }), {
+                status: 400,
+            });
+        }
+        if (!subject) {
+            return new Response(JSON.stringify({ error: 'Subject is required.' }), {
+                status: 400,
+            });
+        }
+
+        delete data?.subject;
+        const textBody: string = Object.entries(data)
+            .map(([key, value]) => `${key}: ${value}`)
+            .join('\n');
+
+            console.log('textBody:----', textBody)
+
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: EMAIL_USER,
+                pass: EMAIL_PASS,
+            },
+        });
+
+        const mailOptions: MailOptions = {
+            from: email,
+            to: EMAIL_USER as string,
+            subject: `${subject}`,
+            text: `${textBody}`,
+        };
+
+        const result: { response: string } = await transporter.sendMail(mailOptions);
+        console.log('Email sent:', result.response);
+
+        return new Response(
+            JSON.stringify({ message: 'Successfully Submitted' }),
+            { status: 200 }
+        );
+    } catch (error: any) {
+        console.error('Failed to send email:', error);
+
+        const errorMessage: string =
+            error?.responseCode === 535
+                ? 'Authentication failed. Check your email credentials.'
+                : 'Something went wrong while sending the email.';
+
+        return new Response(
+            JSON.stringify({ message: 'Failed to send email', error: errorMessage }),
+            { status: 500 }
+        );
+    }
+}
