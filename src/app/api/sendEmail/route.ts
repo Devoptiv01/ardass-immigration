@@ -1,4 +1,4 @@
-import { EMAIL_PASS, EMAIL_USER } from '@/libs/contants';
+import { EMAIL_PASS, EMAIL_USER } from '@/lib/contants';
 import nodemailer from 'nodemailer';
 
 export const runtime = 'nodejs';

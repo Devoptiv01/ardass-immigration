@@ -6,33 +6,35 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaCar, FaUserGraduate, FaPlane, FaBriefcase } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const visaItems = [
   {
-    icon: <FaCar size={28} />,
-    title: "Business Visa",
-    description:
-      "Lorem Ipsum is simply dummy text the printing and typeset Lorem Ipsum",
-  },
-  {
     icon: <FaUserGraduate size={28} />,
-    title: "Student Visa",
+    title: "Education & Student Visa Guidance",
     description:
-      "Lorem Ipsum is simply dummy text the printing and typeset Lorem Ipsum",
-  },
-  {
-    icon: <FaPlane size={28} />,
-    title: "Tourist Visa",
-    description:
-      "Lorem Ipsum is simply dummy text the printing and typeset Lorem Ipsum",
+      "From course selection to post-study work pathways, we offer expert support that saves both time and tuition missteps — maximizing your ROI.",
   },
   {
     icon: <FaBriefcase size={28} />,
-    title: "Working Visa",
+    title: "Work Permit & LMIA Support",
     description:
-      "Lorem Ipsum is simply dummy text the printing and typeset Lorem Ipsum",
+      "Seamless work permit processing and LMIA assistance with job-matching support — helping clients avoid costly mistakes and delays.",
+  },
+  {
+    icon: <FaCar size={28} />,
+    title: "Business & Investor Immigration",
+    description:
+      "We help entrepreneurs and investors gain the right foothold in Canada through structured, compliant, and opportunity-driven programs.",
+  },
+  {
+    icon: <FaPlane size={28} />,
+    title: "Tourist & Super Visa Services",
+    description:
+      "Simplified and success-oriented visitor visa services, ensuring your family reunions or vacations are hassle-free and fully optimized.",
   },
 ];
+
 
 const VisaCategories = () => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
@@ -64,26 +66,32 @@ const VisaCategories = () => {
   return (
     <section
       className="bg-[#f3f6ec] py-16 px-6 lg:px-20"
-    //   style={{ backgroundColor: "var(--color-background)" }}
+      //   style={{ backgroundColor: "var(--color-background)" }}
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-10 items-start">
         {/* Left Content */}
         <div className="lg:col-span-2 space-y-6" data-aos="fade-right">
           <div className="flex justify-between items-center flex-wrap">
             <div>
-              <p className="text-sm text-gray-500 uppercase font-medium mb-1 tracking-wide">
+              {/* <p className="text-sm text-gray-500 uppercase font-medium mb-1 tracking-wide">
                 Visa Category
-              </p>
+              </p> */}
               <h2
                 className="text-3xl font-bold"
                 // style={{ color: "var(--color-foreground)" }}
               >
-                Path Less Traveled Off
+                <span className="tracking-wide text-dark-orange text-4xl">Services</span> 
+                <br/> We Offer — Value Beyond Just Visas
               </h2>
+              <p className="text-sm text-gray-500 py-2">
+                At Ardaas Immigration, we deliver more than just approvals — we
+                deliver peace of mind, personalized planning, and real financial
+                value.
+              </p>
             </div>
-            <button className="mt-4 md:mt-0 bg-dark-orange hover:bg-extra-dark-orange text-white text-sm font-medium px-4 py-2 rounded-full transition-all  flex items-center gap-1 hover:gap-3 duration-300">
-              All Category <ArrowRight/>
-            </button>
+            <Link href='/contact-us' className="mt-4 md:mt-0 bg-dark-orange hover:bg-extra-dark-orange text-white text-sm font-medium px-4 py-2 rounded-full transition-all  flex items-center gap-1 hover:gap-3 duration-300">
+              All Category <ArrowRight />
+            </Link>
           </div>
 
           {/* Cards */}

@@ -5,30 +5,28 @@ import { useEffect } from "react";
 import CalendlyPopupButton from "./CalendlyPopupButton";
 import AOS from 'aos';
 
-
 const cards = [
   {
-    heading: "Lorem Ipsum",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    heading: "Personalized Advice",
+    content: "Get one-on-one guidance tailored to your unique immigration goals and situation.",
   },
   {
-    heading: "Dolor Sit",
-    content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    heading: "Consultation Slots",
+    content: "We offer appointments up to 3 months in advance. New slots open at the end of each month.",
   },
   {
-    heading: "Amet Consectetur",
-    content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    heading: "Choose Your Category",
+    content: "Book based on your need – Study Visa, PR, Work Permit, LMIA, or Family Sponsorship.",
   },
   {
-    heading: "Adipiscing Elit",
-    content: "Duis aute irure dolor in reprehenderit in voluptate velit esse.",
+    heading: "Avoid Delays",
+    content: "Speak directly with RCICs to identify and fix issues before submitting your application.",
   },
   {
-    heading: "Tempor Incididunt",
-    content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
+    heading: "Easy Booking Process",
+    content: "Select a time, fill out a short form, and confirm your slot – it takes less than 2 minutes.",
   },
 ];
-
 
 const containerVariants = {
   hidden: { opacity: 0 },

@@ -6,19 +6,29 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "What could possibly be your first question?",
+    question: "What is the difference between a work permit and PR?",
     answer:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "A work permit allows you to work in Canada temporarily, while Permanent Residency (PR) gives you the right to live and work in Canada indefinitely, along with access to social benefits.",
   },
   {
-    question: "How do you use this feature effectively?",
+    question: "How long does it take to get a student visa for Canada?",
     answer:
-      "You can utilize it by reading documentation, exploring examples, and practicing consistently with the framework tools.",
+      "Processing times vary by country, but typically range from 4 to 12 weeks. Starting your application early is key.",
   },
   {
-    question: "Is this service available 24/7?",
+    question: "Can I bring my family on a work visa?",
     answer:
-      "Yes, our platform is cloud-based and accessible 24/7 from anywhere in the world.",
+      "Yes, in many cases you can bring your spouse and children. Spouses may be eligible for open work permits, and children for study permits.",
+  },
+  {
+    question: "What is an LMIA and why is it important?",
+    answer:
+      "An LMIA (Labour Market Impact Assessment) is a document that employers in Canada need before hiring foreign workers. It proves there's a need for a foreign hire due to a lack of local candidates.",
+  },
+  {
+    question: "Do you assist with visitor or tourist visa applications?",
+    answer:
+      "Yes, we provide full support for tourist visa applications, including documentation guidance, cover letter preparation, and interview readiness.",
   },
 ];
 

@@ -7,11 +7,14 @@ import 'aos/dist/aos.css';
 import { motion } from 'framer-motion';
 
 const contentData = {
-  basic: 'This is a short basic summary about the immigration process and common steps. This in-depth guide covers every step of the immigration process in Canada including express entry, PNP, study and work visa paths, eligibility assessments, application tips.',
+  basic: "At Ardaas Immigration, we guide clients through study, work, visitor, PR, LMIA, PNP, and sponsorship pathways with ease. Our process is transparent, affordable, and personalized. Whether you're starting your journey or stuck midway, we are here to simplify your immigration process.",
+  
   medium:
-    'This medium-level content expands further. It discusses timelines, required documents, interviews, and next steps in more detail for different visa types. This in-depth guide covers every step of the immigration process in Canada including express entry, PNP, study and work visa paths, eligibility assessments, application tips, timelines, post-arrival settlement support, financial planning, IELTS prep, and legal consultation insights. Learn how our team guides you through A to Z.',
-  indepth: `This in-depth guide covers every step of the immigration process in Canada including express entry, PNP, study and work visa paths, eligibility assessments, application tips, timelines, post-arrival settlement support, financial planning, IELTS prep, and legal consultation insights. Learn how our team guides you through A to Z. This in-depth guide covers every step of the immigration process in Canada including express entry, PNP, study and work visa paths, eligibility assessments, application tips, timelines, post-arrival settlement support, financial planning, IELTS prep, and legal consultation insights. Learn how our team guides you through A to Z. This in-depth guide covers every step of the immigration process in Canada including express entry, PNP, study and work visa paths, eligibility assessments, application tips, timelines, post-arrival settlement support, financial planning, IELTS prep, and legal consultation insights. Learn how our team guides you through A to Z.`,
+    "We assist with Express Entry, PNPs like OINP, student admissions, work permits, LMIA-backed jobs, and spousal/family sponsorship. Our ICCRC-licensed consultants ensure documents are accurate and deadlines are met. Clients save time, avoid rejections, and benefit from honest consultation. Our packages are designed to give value, not just promises.",
+  
+  indepth: `Ardaas Immigration offers end-to-end immigration services including Express Entry, provincial nominations (OINP, SINP, BC PNP), student visas, LMIA assistance, work permits, tourist visas, and PR applications. We don’t just fill forms — we analyze your case for possible rejections and offer preemptive solutions. From college selection and SOP guidance to interview prep and settlement advice, every client gets a customized strategy. With live Express Entry and PNP webinars, bilingual support, and refund assurance policies, we work hard to ensure peace of mind. Clients who save money by choosing Ardaas invest it in their settlement and future — where it matters most.`
 };
+
 
 const getLines = (text: string, lines: number) => {
   return text.split(' ').slice(0, lines * 5).join(' ')

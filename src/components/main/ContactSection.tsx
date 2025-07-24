@@ -6,7 +6,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import Link from "next/link";
-import { RECAPTCHA_SITE_KEY } from "@/libs/contants";
+import { RECAPTCHA_SITE_KEY } from "@/lib/contants";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { VscLoading } from "react-icons/vsc";
@@ -196,7 +196,7 @@ const ContactSection = () => {
               )}
               <input
                 type="hidden"
-                {...register("captcha", { required: false })}
+                {...register("captcha", { required: true })}
               />
             </div>
 

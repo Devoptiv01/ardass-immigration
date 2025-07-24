@@ -4,11 +4,28 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import AOS from 'aos';
 
+
 const services = [
-  { id: 's1', title: 'S1', description: 'Short description 1' },
-  { id: 's2', title: 'S2', description: 'Short description 2' },
-  { id: 's3', title: 'S3', description: 'Short description 3' },
-  { id: 's4', title: 'S4', description: 'Short description 4' },
+  {
+    id: 'work-permit',
+    title: 'Work Permits',
+    description: 'We assist individuals in securing work permits that allow them to gain valuable experience abroad.',
+  },
+  {
+    id: 'lmia',
+    title: 'LMIA',
+    description: 'Expert help with the Labour Market Impact Assessment to support Canadian employers and foreign workers.',
+  },
+  {
+    id: 'pr',
+    title: 'Permanent Residency (PR)',
+    description: 'Comprehensive PR application guidance, whether via Express Entry, PNP, or family sponsorship.',
+  },
+  {
+    id: 'citizenship',
+    title: 'Citizenship',
+    description: 'Support through the Canadian citizenship process after meeting permanent residency obligations.',
+  },
 ];
 
 export default function HowWeHelp() {
